@@ -63,19 +63,13 @@ class GazeTrackingTutorial:
                 ]
             },
             {
-                "title": "How It Works",
+                "title": "Blink Controls",
                 "text": [
                     "1. The system tracks the position of your eyes",
                     "2. You'll look at 9 different points on the screen",
                     "3. For each point, focus your gaze and blink twice to select",
                     "4. This helps the system learn how your eye positions",
                     "   map to screen coordinates.",
-                    "Double-blink to continue..."
-                ]
-            },
-            {
-                "title": "Blink Controls",
-                "text": [
                     "You can control the cursor using blinks:",
                     "• Double-blink = Single Click",
                     "• Triple-blink = Double Click",

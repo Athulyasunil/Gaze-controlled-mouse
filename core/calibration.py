@@ -75,16 +75,17 @@ def perform_calibration(cap, face_mesh, blink_detector, screen_w, screen_h):
     """
     # Calibration points (9-point calibration for better accuracy)
     calibration_points = [
-        (screen_w // 2, screen_h // 2),            # Center
-        (screen_w // 10, screen_h // 10),          # Top left
-        (screen_w // 10, screen_h * 9 // 10),      # Bottom left
-        (screen_w * 9 // 10, screen_h // 10),      # Top right
-        (screen_w * 9 // 10, screen_h * 9 // 10),  # Bottom right
-        (screen_w // 2, screen_h // 10),           # Top middle
-        (screen_w // 2, screen_h * 9 // 10),       # Bottom middle
-        (screen_w // 10, screen_h // 2),           # Left middle
-        (screen_w * 9 // 10, screen_h // 2)        # Right middle
+    (screen_w // 2, screen_h // 2),            # Center
+    (screen_w // 20, screen_h // 20),          # Closer to Top Left Corner
+    (screen_w // 20, screen_h * 19 // 20),     # Closer to Bottom Left Corner
+    (screen_w * 19 // 20, screen_h // 20),     # Closer to Top Right Corner
+    (screen_w * 19 // 20, screen_h * 19 // 20),# Closer to Bottom Right Corner
+    (screen_w // 2, screen_h // 20),           # Higher Top Middle
+    (screen_w // 2, screen_h * 19 // 20),      # Lower Bottom Middle
+    (screen_w // 20, screen_h // 2),           # Further Left Middle
+    (screen_w * 19 // 20, screen_h // 2)       # Further Right Middle
     ]
+
     
     # Lists to store calibration data
     eye_positions = []
