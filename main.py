@@ -1,7 +1,10 @@
+"""main.py
+This script is the main entry point for the Eye & Gaze Tracking with Blink Detection application."""
 import cv2
 from core.face_detector import detect_face
 from core.gaze_tracker import track_gaze
 from core.blink_detection import BlinkDetector
+import pyautogui
 
 def main():
     print("Starting Face & Gaze Tracking with Blink Detection...")
@@ -64,11 +67,16 @@ def main():
         elif key == ord('c'):
             print("Recalibrating...")
             gaze_tracker.calibrate(cap)
-    
+        elif key == ord('u'):  # Test scroll up
+            print("Test scroll up")
+            pyautogui.scroll(10)  # Scroll up
+        elif key == ord('d'):  # Test scroll down
+            print("Test scroll down")
+            pyautogui.scroll(-10)  # Scroll down
+        
     # Clean up
     cap.release()
     cv2.destroyAllWindows()
     print("Tracking stopped.")
-
 if __name__ == "__main__":
     main()
